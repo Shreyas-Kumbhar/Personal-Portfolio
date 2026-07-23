@@ -457,7 +457,8 @@ a {
     height: 85vh;
     object-fit: contain;
     z-index: 2;
-    filter: drop-shadow(0 -10px 40px rgba(0, 81, 255, 0.3));
+    /* Cinematic lighting: lower brightness, increase contrast, dual red/blue rim light */
+    filter: brightness(0.85) contrast(1.15) saturate(1.1) drop-shadow(-15px 0 30px rgba(230, 0, 40, 0.6)) drop-shadow(15px 0 30px rgba(0, 81, 255, 0.6));
     transition: transform 0.1s ease-out;
     pointer-events: none;
 }

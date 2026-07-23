@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreyas Kumbhar | Cinematic Portfolio</title>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fonts: Bebas Neue for cinematic headers, Inter for modern body text -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-glow"></div>
+
+    <!-- FX Canvas (Sparks, Dust, Webs) -->
+    <canvas id="fx-canvas"></canvas>
+
+    <!-- Background Elements -->
+    <div class="bg-vignette"></div>
+    <div class="bg-web-pattern"></div>
+    <div class="background-glows">
+        <div class="glow glow-red"></div>
+        <div class="glow glow-blue"></div>
+        <div class="glow glow-accent"></div>
+    </div>
+
+    <!-- Smoke/Fog Layers -->
+    <div class="fog-container">
+        <div class="fog fog-1"></div>
+        <div class="fog fog-2"></div>
+    </div>
+
+    <!-- Spotlight Element -->
+    <div class="spotlight"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar cinematic-entrance">
+        <div class="logo">
+            <i class="fa-solid fa-spider"></i>
+            <span class="logo-text">Shreyas</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home" class="active"><span class="stretch-text">Home</span></a></li>
+            <li><a href="#about"><span class="stretch-text">About</span></a></li>
+            <li><a href="#projects"><span class="stretch-text">Projects</span></a></li>
+            <li><a href="#skills"><span class="stretch-text">Skills</span></a></li>
+            <li><a href="#contact"><span class="stretch-text">Contact</span></a></li>
+        </ul>
+        <a href="#contact" class="btn-cta">Hire Me</a>
+        <!-- Mobile Menu Toggle -->
+        <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero cinematic-entrance">
+        <!-- Huge Background Text -->
+        <div class="hero-bg-text">SHREYAS<br>KUMBHAR</div>
+
+        <div class="hero-content">
+            <!-- Central Hero Image -->
+            <img src="assets/hero.png" alt="Shreyas Kumbhar" class="hero-image float-anim"
+                onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'">
+
+            <div class="hero-text-overlay">
+                <!-- Subtitle with Typing Animation -->
+                <p class="subtitle typing-text">Java Backend Developer | Spring Boot | MySQL</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary pulse-btn">View Projects</a>
+                    <a href="#" class="btn-secondary pulse-btn"><i class="fa-solid fa-play"></i> Watch Intro</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section glass-section reveal blur-reveal">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-content">
+            <div class="about-text">
+                <p>Hello! I'm <strong>Shreyas Kumbhar</strong>, a passionate Java Backend Developer specializing in
+                    building robust, scalable, and secure server-side applications. With expertise in Spring Boot, REST
+                    APIs, and database management using MySQL, I thrive on solving complex backend challenges and
+                    optimizing performance.</p>
+                <p>My journey in software development has equipped me with a strong foundation in modern backend
+                    architectures, microservices, and containerization. When I'm not coding, I'm exploring new
+                    technologies or architecting high-performance systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section reveal blur-reveal">
+        <h2 class="section-title">Cinematic <span>Projects</span></h2>
+        <div class="projects-grid perspective-container">
+            <!-- Project 1 -->
+            <div class="project-card glass-card tilt-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Project 1">
+                </div>
+                <div class="project-info">
+                    <h3>E-Commerce API</h3>
+                    <p class="tech-stack">Java • Spring Boot • MySQL • JWT</p>
+                    <p>A comprehensive RESTful API for an e-commerce platform featuring authentication, product
+                        management, and secure order processing.</p>
+                    <a href="#" class="btn-outline pulse-btn">View Code <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card glass-card tilt-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Project 2">
+                </div>
+                <div class="project-info">
+                    <h3>Inventory Management</h3>
+                    <p class="tech-stack">Java • Spring MVC • Hibernate</p>
+                    <p>A high-performance inventory tracking system designed for scale, with real-time stock updates and
+                        reporting capabilities.</p>
+                    <a href="#" class="btn-outline pulse-btn">View Code <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card glass-card tilt-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                        alt="Project 3">
+                </div>
+                <div class="project-info">
+                    <h3>Task Scheduler Microservice</h3>
+                    <p class="tech-stack">Spring Boot • Docker • Redis</p>
+                    <p>A distributed task scheduling microservice handling background jobs asynchronously with high
+                        availability and resilience.</p>
+                    <a href="#" class="btn-outline pulse-btn">View Code <i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section glass-section reveal blur-reveal">
+        <h2 class="section-title">Core <span>Arsenal</span></h2>
+        <div class="skills-container">
+            <div class="skill-badge"><i class="fa-brands fa-java"></i> Java</div>
+            <div class="skill-badge"><i class="fa-solid fa-leaf"></i> Spring Boot</div>
+            <div class="skill-badge"><i class="fa-solid fa-database"></i> MySQL</div>
+            <div class="skill-badge"><i class="fa-solid fa-server"></i> REST APIs</div>
+            <div class="skill-badge"><i class="fa-solid fa-layer-group"></i> Hibernate</div>
+            <div class="skill-badge"><i class="fa-brands fa-git-alt"></i> Git</div>
+            <div class="skill-badge"><i class="fa-brands fa-docker"></i> Docker</div>
+            <div class="skill-badge"><i class="fa-brands fa-html5"></i> HTML</div>
+            <div class="skill-badge"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+            <div class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section reveal blur-reveal">
+        <h2 class="section-title">Establish <span>Contact</span></h2>
+        <div class="contact-wrapper perspective-container">
+            <div class="contact-info glass-card tilt-card">
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p>contact@shreyaskumbhar.dev</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <p>linkedin.com/in/shreyas-kumbhar</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-brands fa-github"></i>
+                    <p>github.com/shreyaskumbhar</p>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Pune, India</p>
+                </div>
+            </div>
+
+            <form class="contact-form glass-card tilt-card">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Your Name</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Your Email</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="message" required placeholder=" " rows="4"></textarea>
+                    <label for="message">Transmission Message</label>
+                </div>
+                <button type="submit" class="btn-primary btn-submit pulse-btn">Send Transmission <i
+                        class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Shreyas Kumbhar. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>

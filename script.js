@@ -257,9 +257,8 @@ navItemsList.forEach(link => {
     });
 });
 
-// --- Contact Form Simulation ---
+// --- Contact Form Handling ---
 const form = document.querySelector('.contact-form');
-/* TEMPORARILY DISABLED FOR ACTIVATION
 if (form) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -306,4 +305,3 @@ if (form) {
         });
     });
 }
-*/

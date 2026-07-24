@@ -724,6 +724,16 @@ a {
     transform: scale(1.1) rotate(10deg);
 }
 
+.info-item p a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-item p a:hover {
+    color: var(--primary-main);
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;

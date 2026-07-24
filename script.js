@@ -259,21 +259,51 @@ navItemsList.forEach(link => {
 
 // --- Contact Form Simulation ---
 const form = document.querySelector('.contact-form');
+/* TEMPORARILY DISABLED FOR ACTIVATION
 if (form) {
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const btn = form.querySelector('.btn-submit');
         const originalText = btn.innerHTML;
         
-        btn.innerHTML = 'Message Sent <i class="fa-solid fa-check"></i>';
-        btn.style.background = 'var(--primary-main)';
-        btn.style.color = 'var(--text-white)';
-        btn.style.boxShadow = 'var(--glow-secondary)';
-        
-        setTimeout(() => {
-            btn.innerHTML = originalText;
-            btn.style = '';
-            form.reset();
-        }, 3000);
+        // Show loading state
+        btn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
+        btn.style.opacity = '0.8';
+        btn.disabled = true;
+
+        const formData = new FormData(form);
+
+        fetch("https://formsubmit.co/ajax/kumbharshreyas07@gmail.com", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            if(data.success) {
+                btn.innerHTML = 'Message Sent <i class="fa-solid fa-check"></i>';
+                btn.style.background = 'var(--primary-accent)';
+                btn.style.color = 'var(--text-white)';
+                btn.style.boxShadow = 'var(--glow-secondary)';
+                form.reset();
+            } else {
+                throw new Error("Failed to send message");
+            }
+        })
+        .catch(error => {
+            console.error(error);
+            btn.innerHTML = 'Error! Try Again <i class="fa-solid fa-xmark"></i>';
+            btn.style.background = '#ef4444'; // Red error color
+            btn.style.color = 'var(--text-white)';
+        })
+        .finally(() => {
+            btn.style.opacity = '1';
+            btn.disabled = false;
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.style = '';
+            }, 4000);
+        });
     });
 }
+*/

@@ -166,35 +166,39 @@
         <h2 class="section-title">Get In <span>Touch</span></h2>
         <div class="contact-wrapper perspective-container">
             <div class="contact-info glass-card tilt-card">
-                <div class="info-item">
+                <a href="mailto:kumbharshreyas07@gmail.com" class="info-item"
+                    style="color: inherit; text-decoration: none; cursor: pointer;">
                     <i class="fa-solid fa-envelope"></i>
-                    <p>contact@shreyaskumbhar.dev</p>
-                </div>
-                <div class="info-item">
+                    <p>kumbharshreyas07@gmail.com</p>
+                </a>
+                <!-- <a href="https://linkedin.com/in/shreyas-kumbhar" target="_blank" rel="noopener noreferrer" class="info-item" style="color: inherit; text-decoration: none; cursor: pointer;">
                     <i class="fa-brands fa-linkedin"></i>
                     <p>linkedin.com/in/shreyas-kumbhar</p>
-                </div>
-                <div class="info-item">
+                </a> -->
+                <a href="https://github.com/Shreyas-Kumbhar" target="_blank" rel="noopener noreferrer" class="info-item"
+                    style="color: inherit; text-decoration: none; cursor: pointer;">
                     <i class="fa-brands fa-github"></i>
-                    <p>github.com/shreyaskumbhar</p>
-                </div>
-                <div class="info-item">
+                    <p>github.com/Shreyas-Kumbhar</p>
+                </a>
+                <a href="https://www.google.com/maps/place/Kolhapur,+Maharashtra/@16.7123644,74.1867386,13z/data=!3m1!4b1!4m6!3m5!1s0x3bc1000cdec07a29:0xece8ea642952e42f!8m2!3d16.706369!4d74.2481772!16zL20vMDF4cG4y?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+                    target="_blank" rel="noopener noreferrer" class="info-item"
+                    style="color: inherit; text-decoration: none; cursor: pointer;">
                     <i class="fa-solid fa-location-dot"></i>
-                    <p>Pune, India</p>
-                </div>
+                    <p>Kolhapur, Maharashtra, India</p>
+                </a>
             </div>
 
-            <form class="contact-form glass-card tilt-card">
+            <form action="https://formsubmit.co/kumbharshreyas07@gmail.com" method="POST" class="contact-form glass-card tilt-card">
                 <div class="input-group">
-                    <input type="text" id="name" required placeholder=" ">
+                    <input type="text" id="name" name="name" required placeholder=" ">
                     <label for="name">Your Name</label>
                 </div>
                 <div class="input-group">
-                    <input type="email" id="email" required placeholder=" ">
+                    <input type="email" id="email" name="email" required placeholder=" ">
                     <label for="email">Your Email</label>
                 </div>
                 <div class="input-group">
-                    <textarea id="message" required placeholder=" " rows="4"></textarea>
+                    <textarea id="message" name="message" required placeholder=" " rows="4"></textarea>
                     <label for="message">Your Message</label>
                 </div>
                 <button type="submit" class="btn-primary btn-submit pulse-btn">Send Message <i
